@@ -1,0 +1,535 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+  background-color: #1E1E1E;
+  color: #fff;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.global-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.page-container {
+  width: 100%;
+  max-width: 1440px;
+  position: relative;
+}
+
+.header {
+  padding: 40px 80px;
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+
+.logo {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 40px;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.link.active {
+  color: #E2F063;
+}
+
+.link {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 29px;
+}
+.link-space {
+margin-left: 40px;
+}
+
+.links {
+  display: flex;
+  justify-content:space-between;
+}
+
+.container {
+  margin-top: 110px;
+  padding: 0 80px;
+}
+
+.gradient-block {
+  position: relative;
+  width: 100%;
+  max-width: 1199px;
+}
+
+.gradient {
+  top: 0;
+  left: 0;
+  position: absolute;
+  background: linear-gradient(90deg, #8B39B2 0%, #E2F063 100%);
+  opacity: 0.6;
+  filter: blur(200px);
+  width: 100%;
+  height: 100%;
+}
+
+.page-title {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 70px;
+  line-height: 70px;
+  color: #E2F063;
+}
+.ship-title {
+  margin-bottom: 60px;
+}
+
+.starship-title {
+  margin-bottom: 30px;
+}
+
+.home-text {
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 140%;
+}
+.sort-by {
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 26px;
+  margin-bottom: 66px;
+}
+.select-sort {
+  margin-left: 16px;
+  text-align: center;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 26px;
+}
+
+.ship-grid {
+  display: grid;
+  height: 100%;
+  width: 100%;
+  gap: 61px;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 385px));
+}
+
+.shipviev-grid {
+  display: grid;
+  height: 100%;
+  width: 100%;
+  gap: 47px;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 608px));
+  align-items: flex-start;
+}
+
+.ship-card {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.ship-viev {
+  display: flex;
+  flex-direction: column;
+}
+
+.ship-card:hover {
+  transform: scale(1.1);
+}
+
+.ship-card-image {
+  height: 221px;
+  border-radius: 10px;
+  margin-bottom: 32px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.ship-viev-image {
+  height: 419px;
+  border-radius: 10px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.ship-card-info {
+  display: grid;
+  row-gap: 14px;
+}
+
+.ship-viev-info {
+  display: grid;
+  row-gap: 20px;
+}
+
+.info-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.viev-info-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.info-row span {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 140%;
+  color: #1E1E1E;
+}
+
+.viev-info-row span {
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 140%;
+}
+
+.info-row .info-value {
+  max-width: 230px;
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 140%;
+  text-align: right;
+}
+
+.viev-info-row .viev-info-value {
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 140%;
+  text-align: right;
+}
+
+.planets-title {
+  margin-bottom: 57px;
+}
+
+.planets-grid {
+  display: grid;
+  height: 100%;
+  width: 100%;
+  gap: 32px;
+  grid-template-columns: repeat(auto-fill, 624px);
+}
+
+.planet-card {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  /* transition: all 0.2s ease-in-out; */
+}
+
+/* .planet-card:hover {
+  transform: scale(1.1);
+} */
+
+.planet-card-image {
+  height: 224px;
+  width: 285px;
+  border-radius: 10px;
+  margin-right: 27px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.planet-card-info {
+  flex: 1;
+  display: grid;
+  row-gap: 17px;
+}
+
+.planet-info-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.planet-info-row span {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 140%;
+  color: #1E1E1E;
+}
+
+.planet-info-row .planet-info-value {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 140%;
+  text-align: right;
+}
+
+.menu-button {
+  display: none;
+}
+
+.mobile-menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  background-color: #1E1E1E;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.mobile-menu.open {
+  display: flex;
+}
+
+.mobile-link {
+  font-weight: 400;
+  font-size: 60px;
+  line-height: 72px;
+}
+
+.mobile-link.active {
+  color: #E2F063;
+}
+
+.mobile-link-space {
+  margin-top: 31px;
+}
+
+@media (max-width: 767px) {
+  .header {
+    padding: 20px 10px;
+  }
+
+  .links {
+    display: none;
+  }
+
+  .menu-button {
+    display: block;
+    background-color: unset;
+    border: unset;
+    cursor: pointer;
+    padding: 0;
+  }
+
+  .container {
+    margin-top: 50px;
+    padding: 0 10px 90px;
+  }
+
+  .page-title {
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 120%;
+  }
+
+  .home-text {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 140%;
+  }
+
+  .gradient {
+    filter: blur(120px);
+  }
+
+  .sort-by {
+    margin-bottom: 90px;
+  }
+
+  .ship-grid {
+    display: grid;
+    height: 100%;
+    width: 100%;
+    gap: 20px;
+    grid-template-columns: 340px;
+    justify-content: center;
+  }
+
+  .ship-card {
+    padding: 17px 18px;
+  }
+
+  .ship-card-image {
+    height: 195px;
+    margin-bottom: 20px;
+  }
+
+  .ship-card-info {
+    row-gap: 16px;
+  }
+
+  .info-row span {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 140%;
+  }
+
+  .info-row .info-value {
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 140%;
+  }
+
+  .ship-title {
+    margin-bottom: 19px;
+  }
+
+  .shipviev-grid {
+    gap: 20px;
+  }
+
+  .ship-viev-image {
+    height: 228px;
+  }
+
+  .viev-info-row {
+    flex-direction: column;
+  }
+
+  .viev-info-row span {
+    font-size: 24px;
+  }
+
+  .viev-info-row .viev-info-value {
+    margin-top: 12px;
+    font-size: 30px;
+    text-align: left;
+  }
+
+  .planets-title {
+    margin-bottom: 21px;
+  }
+
+  .planets-grid {
+    justify-content: center;
+    grid-template-columns: 340px;
+    gap: 20px;
+  }
+
+  .planet-card {
+    padding: 9px;
+  }
+
+  .planet-card-image {
+    height: 122px;
+    width: 155px;
+    margin-right: 14px;
+  }
+
+  .planet-card-info {
+    row-gap: 10px;
+  }
+
+  .planet-info-row span {
+    font-size: 10px;
+  }
+
+  .planet-info-row .planet-info-value {
+    font-size: 13px;
+  }
+}
+
+.lds-spinner {
+  color: official;
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.lds-spinner div {
+  transform-origin: 40px 40px;
+  animation: lds-spinner 1.2s linear infinite;
+}
+.lds-spinner div:after {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 3px;
+  left: 37px;
+  width: 6px;
+  height: 18px;
+  border-radius: 20%;
+  background: #fff;
+}
+.lds-spinner div:nth-child(1) {
+  transform: rotate(0deg);
+  animation-delay: -1.1s;
+}
+.lds-spinner div:nth-child(2) {
+  transform: rotate(30deg);
+  animation-delay: -1s;
+}
+.lds-spinner div:nth-child(3) {
+  transform: rotate(60deg);
+  animation-delay: -0.9s;
+}
+.lds-spinner div:nth-child(4) {
+  transform: rotate(90deg);
+  animation-delay: -0.8s;
+}
+.lds-spinner div:nth-child(5) {
+  transform: rotate(120deg);
+  animation-delay: -0.7s;
+}
+.lds-spinner div:nth-child(6) {
+  transform: rotate(150deg);
+  animation-delay: -0.6s;
+}
+.lds-spinner div:nth-child(7) {
+  transform: rotate(180deg);
+  animation-delay: -0.5s;
+}
+.lds-spinner div:nth-child(8) {
+  transform: rotate(210deg);
+  animation-delay: -0.4s;
+}
+.lds-spinner div:nth-child(9) {
+  transform: rotate(240deg);
+  animation-delay: -0.3s;
+}
+.lds-spinner div:nth-child(10) {
+  transform: rotate(270deg);
+  animation-delay: -0.2s;
+}
+.lds-spinner div:nth-child(11) {
+  transform: rotate(300deg);
+  animation-delay: -0.1s;
+}
+.lds-spinner div:nth-child(12) {
+  transform: rotate(330deg);
+  animation-delay: 0s;
+}
+@keyframes lds-spinner {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
